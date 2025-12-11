@@ -70,7 +70,7 @@ with open('input.txt') as f:
             possible = True
             current_sum = 0
             for r, p_col in enumerate(pivots):
-                val = rref[r][-1] # RHS
+                val = rref[r][-1]
                 for f_idx, f_val in zip(free_vars, free_vals):
                     val -= rref[r][f_idx] * Fraction(f_val)
                 if val.denominator != 1 or val < 0:
